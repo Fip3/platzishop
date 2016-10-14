@@ -10,8 +10,8 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap-flex.min.css">
-
-    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
 
   </head>
   <body>
@@ -23,7 +23,10 @@
             <h1>PlatziShop</h1>
           </div>
           <div class="col-xs-3 text-xs-right">
-            <a href="#">Login</a>
+            <button class="navbar-toggler pull-xs-right hidden-sm-up" data-toggle="collapse" data-target="#navMenu">
+              &#9776;
+            </button>
+            <a href="#" class="login hidden-xs-down text-uppercase font-weight-bold">Login</a>
           </div>
         </div>
       </div>
@@ -31,35 +34,59 @@
     <!-- /ENCABEZADO -->
 
     <!-- MENU -->
-    <nav id="menu-container" class="navbar navbar-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-10 offset-xs-2 col-md-4 offset-md-0">
-            <ul class="nav navbar-nav">
-              <li class="nav-item active">
-                <a href="#" class="nav-link">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Catálogo</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">Carrito</a>
-              </li>
-            </ul>
+    <div id="menu-container">
+      <nav id="navMenu" class="navbar navbar-toggleable-xs navbar-light collapse"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-10 col-md-4">
+              <ul class="nav navbar-nav">
+                <li class="nav-item text-xs-center active">
+                  <a href="#" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item text-xs-center">
+                  <a href="#" class="nav-link">Catálogo</a>
+                </li>
+                <li class="nav-item text-xs-center">
+                  <a href="#" class="nav-link">Carrito</a>
+                </li>
+                <li class="nav-item text-xs-center hidden-sm-up">
+                  <a href="#" class="nav-link">Login</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 offset-md-2 col-md-6 hidden-xs-down">
+              <form>
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="¿Encontró lo que buscaba?"
+                </div>
+                <span class="input-group-btn">
+                  <button class="btn btn-platzi" type="button">
+                    <span class="hidden-sm-down">Buscar</span> <i class="fa fa-search hidden-md-up"></i>
+                  </button>
+                </span>
+              </form>
+            </div>
           </div>
-          <div class="col-xs-12 offset-md-2 col-md-6">
+        </div>
+      </nav>
+      <div id="search-bar" class="container hidden-sm-up">
+        <div class="row">
+          <div class="col-xs">
             <form>
               <div class="input-group">
                 <input class="form-control" type="text" placeholder="¿Encontró lo que buscaba?"
               </div>
               <span class="input-group-btn">
-                <button class="btn btn-platzi" type="button">Buscar</button>
+                <button class="btn btn-platzi" type="button">
+                  <span class="hidden-sm-down">Buscar</span> <i class="fa fa-search hidden-md-up"></i>
+                </button>
               </span>
             </form>
           </div>
         </div>
       </div>
-    </nav>
+
+    </div>
     <!-- /MENU -->
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
