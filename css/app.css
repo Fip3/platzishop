@@ -45,7 +45,12 @@ input.form-control:focus {
 #info-container img {
 	margin: 0 auto;
 	margin-top: 2em;
+	max-height: 250px;
 }
+
+/*#info-container .img-info {
+	max-height: 250px;
+}*/
 
 #footer-container {
 	background-color: #1c3643;
@@ -83,3 +88,4 @@ input.form-control:focus {
 #breadcrumbs-container .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
 	content: ">";
 }
+
